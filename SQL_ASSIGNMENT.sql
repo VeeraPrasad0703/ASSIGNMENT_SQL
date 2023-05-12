@@ -45,7 +45,8 @@ SELECT * FROM CONTACTS;
 SELECT * FROM CONTACTS WHERE ACTIVE_FLAG=1;
 
 -- 2.Deactivate contacts who are opted out 
-DELETE FROM CONTACTS WHERE OPT_OUT=1;
+UPDATE CONTACTS SET ACTIVE_FLAG=0 WHERE OPT_OUT=1;
+
 SELECT * FROM CONTACTS;
 
 -- 3.Delete all the contacts who have the company name as ‘ABC’
